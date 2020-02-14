@@ -11,7 +11,7 @@ if __name__ == "__main__":
     log_metric("foo", random())
     log_metric("foo", random() + 1)
     log_metric("foo", random() + 2)
-    mlflow.set_experiment("my-experiment")
+    mlflow.set_experiment("my_experiment")
 
     if not os.path.exists("outputs"):
         os.makedirs("outputs")
