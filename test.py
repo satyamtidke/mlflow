@@ -1,6 +1,6 @@
 import mlflow
 import os
-print os.environ["ML_TRACKING_URI"]
+print (os.environ["ML_TRACKING_URI"])
 ML_TRACKING_URI="http://10.77.36.45:5000/"
 MLFLOW_EXPERIMENT_NAME="mlflow_experiment_jnekins"
 mlflow.set_tracking_uri(ML_TRACKING_URI)
