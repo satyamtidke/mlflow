@@ -14,9 +14,9 @@ if __name__ == "__main__":
     log_metric("foo", random() + 2)
     mlflow.set_experiment("my_experiment")
 
-    if not os.path.exists("outputs"):
-        os.makedirs("outputs")
-    with open("outputs/test.txt", "w") as f:
-        f.write("hello world!")
+#     if not os.path.exists("outputs"):
+#         os.makedirs("outputs")
+#     with open("outputs/test.txt", "w") as f:
+#         f.write("hello world!")
 
     log_artifacts("outputs")
