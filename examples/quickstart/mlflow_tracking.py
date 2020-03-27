@@ -12,8 +12,9 @@ if __name__ == "__main__":
     log_metric("foo", random())
     log_metric("foo", random() + 1)
     log_metric("foo", random() + 2)
-    mlflow.set_experiment(os.getenv('MLFLOW_EXPERIMENT_NAME'))
-   # mlflow.set_experiment("my_experiment")
+    print(os.getenv('MLFLOW_EXPERIMENT_NAME'))
+   # mlflow.set_experiment(os.getenv('MLFLOW_EXPERIMENT_NAME'))
+    mlflow.set_experiment("regression_module")
 
     if not os.path.exists("outputs"):
         os.makedirs("outputs")
