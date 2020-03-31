@@ -8,7 +8,7 @@ if __name__ == "__main__":
     print("Running mlflow_tracking.py")
 
     log_param("param1", randint(0, 100))
-    remote_server_uri = "http://10.77.36.45:5000/" # set to your server URI
+    remote_server_uri = "http://10.77.36.45:5000" # set to your server URI
     mlflow.set_tracking_uri(remote_server_uri)
 
     log_metric("foo", random())
