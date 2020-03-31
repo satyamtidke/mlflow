@@ -11,9 +11,9 @@ if __name__ == "__main__":
     remote_server_uri = "http://10.77.36.45:5000" # set to your server URI
     mlflow.set_tracking_uri(remote_server_uri)
 
-    log_metric("foo", random())
-    log_metric("foo", random() + 1)
-    log_metric("foo", random() + 2)
+    log_metric("foo", 1)
+    log_metric("foo", 2)
+    log_metric("foo", 3)
     print(os.getenv('MLFLOW_EXPERIMENT_NAME'))
     mlflow.set_experiment(os.getenv('MLFLOW_EXPERIMENT_NAME'))
     #mlflow.set_experiment("regression_module")
