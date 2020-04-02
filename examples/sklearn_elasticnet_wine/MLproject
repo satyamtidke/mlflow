@@ -8,3 +8,4 @@ entry_points:
       alpha: {type: float, default: 0.5}
       l1_ratio: {type: float, default: 0.1}
     command: "/usr/local/bin/python3.8 train.py {alpha} {l1_ratio}"
+    command: "/usr/local/bin/python3.8 tag_create.py"
