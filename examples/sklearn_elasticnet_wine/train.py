@@ -85,4 +85,5 @@ if __name__ == "__main__":
         name=os.getenv('MLFLOW_MODEL_NAME')
         #it will register model name 
         os.environ['MODEL_URI'] = model_uri
+        print(os.getenv('MODEL_URI'))
         mlflow.register_model(model_uri, name)
