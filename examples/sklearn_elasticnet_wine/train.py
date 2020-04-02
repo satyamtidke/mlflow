@@ -75,8 +75,9 @@ if __name__ == "__main__":
         mlflow.log_metric("r2", r2)
         mlflow.log_metric("mae", mae)
         #run = client.create_run(3)
-        print(run_id)
-        client.set_tag(run_id,os.getenv('tag_key'),"new module")
+        #print(run_id)
+        #client.set_tag(run_id,os.getenv('tag_key'),"new module")
+        mlflow.set_tag(os.getenv('tag_key'), os.getenv('tag_value'))
       
 
         mlflow.sklearn.log_model(lr, "model")
