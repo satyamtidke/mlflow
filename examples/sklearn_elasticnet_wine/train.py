@@ -74,14 +74,14 @@ if __name__ == "__main__":
         mlflow.log_metric("rmse", rmse)
         mlflow.log_metric("r2", r2)
         mlflow.log_metric("mae", mae)
-        #run = client.create_run(3)
-        #print(run_id)
-        #client.set_tag(run_id,os.getenv('tag_key'),"new module")
+        # to set tag in current run
         mlflow.set_tag(os.getenv('tag_key'), os.getenv('tag_value'))
       
 
         mlflow.sklearn.log_model(lr, "model")
+        # function will return current artifact URI
         model_uri = mlflow.get_artifact_uri()
-        print(model_uri)
-        name="jenkins_mlflow_module_1"
+        #print(model_uri)
+        name=os.getenv('MLFLOW_MODEL_NAME')
+        #it will register model name 
         mlflow.register_model(model_uri, name)
