@@ -81,3 +81,6 @@ if __name__ == "__main__":
       
 
         mlflow.sklearn.log_model(lr, "model")
+        model_uri = mlflow.get_artifact_uri()
+        print(model_uri)
+       # mlflow.register_model(model_uri, name)
