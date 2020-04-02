@@ -11,6 +11,8 @@ import numpy as np
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import ElasticNet
+#adding for tag creation
+from  mlflow.tracking import MlflowClient
 
 import mlflow
 import mlflow.sklearn
@@ -71,6 +73,10 @@ if __name__ == "__main__":
         mlflow.log_metric("rmse", rmse)
         mlflow.log_metric("r2", r2)
         mlflow.log_metric("mae", mae)
+        client.set_terminated(run.info.run_id)
+        client.set_tag(run.info.run_id,os.getenv('tag_key'),"new module")
+        client.set_terminated(run.info.run_id)
+        client.set_tag(run.info.run_id,os.getenv('tag_key'),"new module")
       
 
         mlflow.sklearn.log_model(lr, "model")
