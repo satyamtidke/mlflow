@@ -13,6 +13,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import ElasticNet
 #adding for tag creation
 from  mlflow.tracking import MlflowClient
+client = MlflowClient()
 
 import mlflow
 import mlflow.sklearn
