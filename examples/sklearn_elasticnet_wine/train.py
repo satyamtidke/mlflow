@@ -73,6 +73,7 @@ if __name__ == "__main__":
         mlflow.log_metric("rmse", rmse)
         mlflow.log_metric("r2", r2)
         mlflow.log_metric("mae", mae)
+        run = client.create_run(3)
         client.set_terminated(run.info.run_id)
         client.set_tag(run.info.run_id,os.getenv('tag_key'),"new module")
         client.set_terminated(run.info.run_id)
