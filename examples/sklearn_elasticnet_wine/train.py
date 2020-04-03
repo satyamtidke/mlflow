@@ -81,7 +81,7 @@ if __name__ == "__main__":
         mlflow.sklearn.log_model(lr, "model")
         # function will return current artifact URI
         model_uri = mlflow.get_artifact_uri()
-        #print(model_uri)
+        print(model_uri)
         name=os.getenv('MLFLOW_MODEL_NAME')
         #it will register model name 
         os.environ['MODEL_URI'] = model_uri
